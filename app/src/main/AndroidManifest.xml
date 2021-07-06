@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="br.edu.ifsp.scl.ads.pdm.contatoskt">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ContatosKt">
+        <activity android:name=".view.RecuperarSenhaActivity"></activity>
+        <activity android:name=".view.CadastrarActivity" />
+        <activity android:name=".view.AutenticacaoActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.TarefaActivity" />
+        <activity android:name=".view.MainActivity" />
+    </application>
+
+</manifest>

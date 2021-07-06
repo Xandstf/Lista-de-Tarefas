@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ContatosKt</string>
+    <string name="nome_completo">nome completo</string>
+    <string name="site_pessoal">site</string>
+    <string name="email">email</string>
+    <string name="telefone">telefone</string>
+    <string name="comercial">comercial</string>
+    <string name="celular">celular</string>
+    <string name="salvar">salvar</string>
+    <string name="exportar_para_pdf">exportar</string>
+    <string name="nome">nome</string>
+    <string name="novo_contato">Novo contato</string>
+</resources>
