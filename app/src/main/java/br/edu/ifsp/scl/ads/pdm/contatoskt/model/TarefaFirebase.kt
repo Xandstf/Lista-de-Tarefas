@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.ads.pdm.contatoskt.model
 
+import br.edu.ifsp.scl.ads.pdm.contatoskt.adapter.TarefasAdapter
 import br.edu.ifsp.scl.ads.pdm.contatoskt.model.TarefaFirebase.Constantes.LISTA_TAREFAS_DATABASE
 import br.edu.ifsp.scl.ads.pdm.contatoskt.view.MainActivity
 import com.google.firebase.database.ChildEventListener

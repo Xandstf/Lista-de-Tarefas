@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ContatosKt</string>
+    <string name="app_name">Tarefas</string>
     <string name="nome_completo">nome completo</string>
     <string name="site_pessoal">site</string>
     <string name="email">email</string>

@@ -18,7 +18,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.ArrayList;
+import java.util.List;
 
 import br.edu.ifsp.scl.ads.pdm.contatoskt.AutenticacaoFirebase;
 import br.edu.ifsp.scl.ads.pdm.contatoskt.R;
@@ -53,17 +56,23 @@ public class MainActivity extends AppCompatActivity {
         tarefasList = new ArrayList<>();
         tarefasList = tarefaController.buscaTarefas();
         //popularContatosList();
-
-        /*Thread newThread = new Thread(() -> {
+        
+        Thread newThread = new Thread(() -> {
             try {
                 Thread.sleep(5000);
-                tarefasList = tarefaController.buscaTarefas();
-                tarefasAdapter.notifyDataSetChanged();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    tarefasList = tarefaController.buscaTarefas();
+                    tarefasAdapter.notifyDataSetChanged();
+                }
+            });
         });
-        newThread.start();*/
+        newThread.start();
+
 
         // Instanciar o adapter
         tarefasAdapter = new TarefasAdapter(
@@ -220,5 +229,9 @@ public class MainActivity extends AppCompatActivity {
         if(AutenticacaoFirebase.INSTANCE.getFirebaseAuth().getCurrentUser() == null){
             finish();
         }
+    }
+
+    public void teste(){
+        System.out.println("ALOOOOOOOOO "+ tarefasList);
     }
 }
